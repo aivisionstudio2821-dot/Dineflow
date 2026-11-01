@@ -1,0 +1,32 @@
+/src
+├── types/
+│   └── index.ts               # Supabase-ready TypeScript data models (Orders, Tables, Menu, Categories, Feedback)
+├── data/
+│   └── mockData.ts            # Realistic Mexican dishes with Indian Rupee (₹) pricing, tables 1-12, seed tickets
+├── context/
+│   └── RestaurantContext.tsx  # Central reactive store managing cart, live tickets, table statuses, and actions
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx         # 3-zone header with role switcher (Customer/KDS/Admin), table selector, and cart trigger
+│   │   ├── Footer.tsx         # Restaurant compliance, GSTIN, FSSAI, location, and operational links
+│   │   └── ToastContainer.tsx # Live feedback notifications for all kitchen and waiter dispatches
+│   ├── customer/
+│   │   ├── HeroBanner.tsx     # Ambient hero photography, table designation, and quick action bar
+│   │   ├── FoodCard.tsx       # Food cards with dietary markers, spice flame rating, and customizer trigger
+│   │   ├── MenuSection.tsx    # Category tabs, search query filtering, and dietary toggle filters
+│   │   ├── ItemCustomizerModal.tsx # Protein, tortilla, heat levels, paid add-ons, and kitchen notes
+│   │   ├── CartDrawer.tsx     # Slide-over checkout, promo codes (e.g. FUEGO10), and tax computation
+│   │   ├── LiveOrderTracker.tsx # Real-time 5-stage kitchen progress tracker with waiter call shortcuts
+│   │   ├── BillRequestModal.tsx # Itemized bill, split bill calculator, tip selector, and UPI QR code
+│   │   ├── SpinWheelGame.tsx  # Interactive "Salsa Spin & Win" table mini-game for discount vouchers
+│   │   └── CustomerExtrasModal.tsx # Wi-Fi password copy, loyalty points, reviews, and digital tax receipts
+│   ├── kitchen/
+│   │   └── KitchenDisplay.tsx # Dark mode KDS, urgency color coding (<10m, 10-20m, >20m), ticket transitions & recall
+│   └── admin/
+│       ├── AdminDashboard.tsx # Operations hub with live KPIs (Revenue, Tickets, Occupancy, Ticket Time)
+│       ├── OrdersManager.tsx  # Order table with live status filtering, acceptance, rejection, and receipts
+│       ├── MenuManager.tsx    # Dish CRUD, price updating, category creation, and 86'd (out-of-stock) toggles
+│       ├── TableManager.tsx   # Floor plan grid (Tables 1-12) and printable Table QR Standee generator
+│       ├── AnalyticsView.tsx  # Revenue metrics, payment split (UPI/Card/Cash), and top 5 bestsellers
+│       └── FeedbackView.tsx   # Real-time customer ratings and reviews stream
+└── App.tsx                    # Root layout with responsive / mobile frame preview switch
