@@ -1,0 +1,8 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-cream text-charcoal font-sans antialiased}
+@layer components{
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition disabled:opacity-40}
+.btn-p{@apply btn bg-terracotta text-white hover:opacity-90}
+.btn-o{@apply btn border border-charcoal/20 hover:bg-charcoal/5}
+.card{@apply rounded-2xl border border-charcoal/10 bg-white}
+.inp{@apply w-full rounded-xl border border-charcoal/20 bg-white px-3 py-2 text-sm}}
